@@ -1,0 +1,9 @@
+###
+POST http://localhost:3333/feedbacks
+content-type: application/json
+
+{
+    "type": "Novidades",
+    "comment": "Aguardando Novidades na plataforma",
+    "screenshot": "Feature subject"
+}
