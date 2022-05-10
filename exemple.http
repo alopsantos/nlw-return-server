@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3333/feedbacks
+POST https://alopsantosserver.up.railway.app/feedbacks
 content-type: application/json
 
 {
