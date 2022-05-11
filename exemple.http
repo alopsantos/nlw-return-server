@@ -3,7 +3,7 @@ POST https://alopsantosserver.up.railway.app/feedbacks
 content-type: application/json
 
 {
-    "type": "Marcado pago",
-    "comment": "Mercado pago solicitado",
+    "type": "BUG",
+    "comment": "Problemas no envio de whatsapp 6",
     "screenshot": ""
 }

@@ -1,3 +1,4 @@
+import { Twilio } from "twilio";
 import { MailAdapter } from "../adapters/mail-adapter";
 import { FeedbacksRepository } from "../repositorios/feedbacks-repository";
 
@@ -30,16 +31,32 @@ export class SubmitFeedbackUseCase {
       screenshot,
     });
 
-    await this.mailAdapter.sendMail({
-      subject: "Novo Feedback",
-      body: [
-        `<div style="font-family: sans-serif; font-size: 16px; color: #EF1C8F;">`,
-        `<p>Tipo do feedback: ${type}</p>`,
-        `<p>Comentário: ${comment}</p>`,
-        screenshot ? `<img width="200" src="${screenshot}" />` : null,
-        `</div>`,
-      ].join("\n"),
-    });
+    const accountSid = "ACa2355ff413d17f2b611460f8d0bbab0c";
+    const authToken = "bb05e13a2d7ae31cc6da768e9afa8e82";
+
+    const client = new Twilio(accountSid, authToken);
+
+    client.messages
+      .create({
+        body: "join hidden-weather",
+        from: "whatsapp:+14155238886",
+        to: "whatsapp:+554599741775",
+      })
+      .then((message) => console.log(message.sid))
+      .catch((err) => {
+        console.error(err);
+      });
+
+    // await this.mailAdapter.sendMail({
+    //   subject: "Novo Feedback",
+    //   body: [
+    //     `<div style="font-family: sans-serif; font-size: 16px; color: #EF1C8F;">`,
+    //     `<p>Tipo do feedback: ${type}</p>`,
+    //     `<p>Comentário: ${comment}</p>`,
+    //     screenshot ? `<img width="200" src="${screenshot}" />` : null,
+    //     `</div>`,
+    //   ].join("\n"),
+    // });
 
     return feedback;
   }
