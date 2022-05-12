@@ -1,9 +1,21 @@
 ###
-POST https://alopsantosserver.up.railway.app/feedbacks
+POST http://localhost:3333/feedbacks
 content-type: application/json
 
 {
     "type": "Marcado pago",
     "comment": "Mercado pago solicitado",
     "screenshot": ""
+}
+
+###
+POST http://localhost:3333/subscribes
+content-type: application/json
+
+{
+    "status": 0,
+    "subjet": "",
+    "email": "teste@teste.com",
+    "message": "",
+    "newsletter": true
 }

@@ -19,3 +19,16 @@ model Feedback {
 
   @@map("feedbacks")
 }
+
+model Subscribe {
+  id String @id @default(uuid())
+
+  status      Int
+  subjet      String
+  email       String
+  message     String
+  subscribeAt DateTime @default(now())
+  newsletter  Boolean
+
+  @@map("subscribe")
+}
