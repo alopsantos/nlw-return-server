@@ -9,13 +9,13 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3333/subscribes
+POST https://alopsantosserver.up.railway.app/subscribes
 content-type: application/json
 
 {
-    "status": 0,
-    "subjet": "",
+    "status": 1,
+    "subjet": "Anderson Lopes",
     "email": "teste@teste.com",
-    "message": "",
-    "newsletter": true
+    "message": "Teste de mensagem",
+    "newsletter": false
 }

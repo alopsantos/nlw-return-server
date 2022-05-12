@@ -11,14 +11,14 @@ export class SubmitSubscribeUseCase {
   constructor(private subscribersRepository: ISubscribesRepository) {}
 
   async execute(request: ISubmitSubscribeUseCaseRequest) {
-    const { subjet, email, message, newsletter } = request;
+    const { status, subjet, email, message, newsletter } = request;
 
     if (!email) {
       throw new Error("Email é required.");
     }
 
     const subscribe = await this.subscribersRepository.create({
-      status: 0,
+      status,
       subjet,
       email,
       message,
