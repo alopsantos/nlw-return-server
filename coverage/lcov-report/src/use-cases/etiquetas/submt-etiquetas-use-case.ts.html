@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/use-cases/submit-feedback-use-case.ts</title>
+    <title>Code coverage report for src/use-cases/etiquetas/submt-etiquetas-use-case.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/use-cases</a> submit-feedback-use-case.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/use-cases/etiquetas</a> submt-etiquetas-use-case.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>58/58</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>58/58</span>
             </div>
         
             
@@ -109,7 +109,19 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -123,15 +135,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -147,58 +150,91 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { MailAdapter } from "../adapters/mail-adapter";
-import { FeedbacksRepository } from "../repositorios/feedbacks-repository";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IEtiquetasRepository } from "../../repositorios/etiquetas-repository";
 &nbsp;
-interface SubmitFeedbackUseCaseRequest {
-  type: string;
-  comment: string;
-  screenshot?: string;
+interface ISubmitEtiquetaUseCaseRequest {
+  nome: string;
+  endereco: string;
+  complemento: string;
+  observacoes: string;
+  telefone: string;
+  bairro: string;
+  cidade: string;
+  estado: string;
+  cep: string;
+  aeroporto: string;
+  nota: string;
+  peso: string;
+  minuta: string;
+  pedido: string;
 }
-export class SubmitFeedbackUseCase {
-  constructor(
-    private feedbackRepository: FeedbacksRepository,
-    private mailAdapter: MailAdapter
-  ) {}
-  async execute(request: SubmitFeedbackUseCaseRequest) {
-    const { type, comment, screenshot } = request;
 &nbsp;
-    if (!type) {
-      throw new Error("Type is required.");
-    }
-    if (!comment) {
-      throw new Error("Comment is required.");
-    }
-    if (screenshot &amp;&amp; !screenshot.startsWith("data:image/png;base64")) {
-      throw new Error("Invalid screenshot format.");
-    }
+export class SubmitEtiquetaUseCase {
+  constructor(private etiquetasRepository: IEtiquetasRepository) {}
 &nbsp;
-    const feedback = await this.feedbackRepository.create({
-      type,
-      comment,
-      screenshot,
+  async execute(request: ISubmitEtiquetaUseCaseRequest) {
+    const {
+      nome,
+      endereco,
+      complemento,
+      observacoes,
+      telefone,
+      bairro,
+      cidade,
+      estado,
+      cep,
+      aeroporto,
+      nota,
+      peso,
+      minuta,
+      pedido,
+    } = request;
+&nbsp;
+    await this.etiquetasRepository.create({
+      nome,
+      endereco,
+      complemento,
+      observacoes,
+      telefone,
+      bairro,
+      cidade,
+      estado,
+      cep,
+      aeroporto,
+      nota,
+      peso,
+      minuta,
+      pedido,
     });
-&nbsp;
-    await this.mailAdapter.sendMail({
-      subject: "Novo Feedback",
-      body: [
-        `&lt;div style="font-family: sans-serif; font-size: 16px; color: #EF1C8F;"&gt;`,
-        `&lt;p&gt;Tipo do feedback: ${type}&lt;/p&gt;`,
-        `&lt;p&gt;Comentário: ${comment}&lt;/p&gt;`,
-        screenshot ? `&lt;img width="200" src="${screenshot}" /&gt;`<span class="branch-0 cbranch-no" title="branch not covered" > : null,</span>
-        `&lt;/div&gt;`,
-      ].join("\n"),
-    });
-&nbsp;
-    return feedback;
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -210,14 +246,14 @@ export class SubmitFeedbackUseCase {
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at Tue May 17 2022 14:51:40 GMT-0300 (Horário Padrão de Brasília)
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

@@ -32,3 +32,25 @@ model Subscribe {
 
   @@map("subscribe")
 }
+
+model Etiqueta {
+  id String @id @default(uuid())
+
+  nome        String
+  endereco    String
+  complemento String
+  observacoes String
+  telefone    String
+  bairro      String
+  cidade      String
+  estado      String
+  cep         String
+  aeroporto   String
+  nota        String
+  peso        String
+  minuta      String
+  pedido      String
+  createAt    DateTime @default(now())
+
+  @@map("etiquetas")
+}

@@ -9,7 +9,7 @@ content-type: application/json
 }
 
 ###
-POST https://alopsantosserver.up.railway.app/subscribes
+POST http://localhost:3333/subscribes
 content-type: application/json
 
 {
@@ -19,3 +19,26 @@ content-type: application/json
     "message": "Teste de mensagem",
     "newsletter": false
 }
+###
+POST http://localhost:3333/etiquetas
+content-type: application/json
+
+{
+    "nome": "VICTORIA BRITO",
+    "endereco": "RUA SALVADOR DALI, 199",
+    "complemento": "APTO 44 COND LEDA VIEIRALVES",
+    "observacoes": "",
+    "telefone": "(92) 994781604",
+    "bairro": "PARQUE 10 DE NOVEMBRO",
+    "cidade": "MANAUS",
+    "estado": "AM",
+    "cep": "69054332",
+    "aeroporto": "MAO",
+    "nota": "1350",
+    "peso": "0,238",
+    "minuta": "66061317982",
+    "pedido": "610423"
+}
+
+###
+GET http://localhost:3333/etiquetas/1350

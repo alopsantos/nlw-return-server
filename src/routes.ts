@@ -1,7 +1,12 @@
 import express from "express";
 import { NodemailerMailAdapter } from "./adapters/nodemailer/nodemailer-mail-adapter";
+import { PrismaEtiquetaRepository } from "./repositorios/prisma/prisma-etiquetas-repository";
 import { PrismaFeedbacksRepository } from "./repositorios/prisma/prisma-feedbacks-repository";
 import { PrismaSubscribeRepository } from "./repositorios/prisma/prisma-subscribes-repository";
+import {
+  ListEtiquetasUseCase
+} from "./use-cases/etiquetas/list-etiquetas-use-case";
+import { SubmitEtiquetaUseCase } from "./use-cases/etiquetas/submt-etiquetas-use-case";
 import { SubmitFeedbackUseCase } from "./use-cases/submit-feedback-use-case";
 import { SubmitSubscribeUseCase } from "./use-cases/subscribe/submit-subscribe-use-case";
 
@@ -45,4 +50,60 @@ routes.post("/subscribes", async (req, res) => {
   });
 
   return res.status(201).json({ data: subscribe });
+});
+
+routes.get("/etiquetas/:nota", async (req, res) => {
+  const { nota } = req.params;
+
+  const prismaetiquetasrepository = new PrismaEtiquetaRepository();
+  const listEtiquetasUseCase = new ListEtiquetasUseCase(
+    prismaetiquetasrepository
+  );
+
+  const etiquetas = await listEtiquetasUseCase.execute({ nota });
+
+  return res.status(201).json(etiquetas);
+});
+
+routes.post("/etiquetas", async (req, res) => {
+  const {
+    nome,
+    endereco,
+    complemento,
+    observacoes,
+    telefone,
+    bairro,
+    cidade,
+    estado,
+    cep,
+    aeroporto,
+    nota,
+    peso,
+    minuta,
+    pedido,
+  } = req.body;
+
+  const prismaetiquetasrepository = new PrismaEtiquetaRepository();
+  const submitEtiquetaUseCase = new SubmitEtiquetaUseCase(
+    prismaetiquetasrepository
+  );
+
+  await submitEtiquetaUseCase.execute({
+    nome,
+    endereco,
+    complemento,
+    observacoes,
+    telefone,
+    bairro,
+    cidade,
+    estado,
+    cep,
+    aeroporto,
+    nota,
+    peso,
+    minuta,
+    pedido,
+  });
+
+  return res.status(201).json({ Ok: "Cadastro Ok" });
 });
