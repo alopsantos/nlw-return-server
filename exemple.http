@@ -24,20 +24,20 @@ POST http://localhost:3333/etiquetas
 content-type: application/json
 
 {
-    "nome": "VICTORIA BRITO",
-    "endereco": "RUA SALVADOR DALI, 199",
-    "complemento": "APTO 44 COND LEDA VIEIRALVES",
-    "observacoes": "",
-    "telefone": "(92) 994781604",
-    "bairro": "PARQUE 10 DE NOVEMBRO",
-    "cidade": "MANAUS",
-    "estado": "AM",
-    "cep": "69054332",
-    "aeroporto": "MAO",
-    "nota": "1350",
-    "peso": "0,238",
-    "minuta": "66061317982",
-    "pedido": "610423"
+    "nome": "THAYS EMILLY SILVA",
+    "endereco": "AV DAS ARAUCARIAS, 4150",
+    "complemento": "BLOCO B APTO 508",
+    "observacoes": "RESIDENCIAL BLEND",
+    "telefone": "(11) 989897158",
+    "bairro": "SUL (AGUAS CLARAS)",
+    "cidade": "BRASILIA",
+    "estado": "DF",
+    "cep": "71936250",
+    "aeroporto": "BSB",
+    "nota": "1483",
+    "peso": "0,394",
+    "minuta": "66061936970",
+    "pedido": "1483"
 }
 
 ###
